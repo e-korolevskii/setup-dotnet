@@ -102,7 +102,7 @@ describe('installer tests', () => {
       maxRetries: 3
     });
     const response: hc.HttpClientResponse = await httpCallbackClient.get(
-      'https://dot.net/v1/dotnet-install.sh'
+      'https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh'
     );
     expect(response.message.statusCode).toBe(200);
     const upToDateContents: string = await response.readBody();
@@ -122,7 +122,7 @@ describe('installer tests', () => {
       maxRetries: 3
     });
     const response: hc.HttpClientResponse = await httpCallbackClient.get(
-      'https://dot.net/v1/dotnet-install.ps1'
+      'https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.ps1'
     );
     expect(response.message.statusCode).toBe(200);
     const upToDateContents: string = await response.readBody();
